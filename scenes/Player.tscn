@@ -1,6 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scripts/Player.gd" type="Script" id=1]
+[ext_resource path="res://scripts/Interaction.gd" type="Script" id=2]
+[ext_resource path="res://assets/crosshair.png" type="Texture" id=3]
+[ext_resource path="res://scripts/TextureRect.gd" type="Script" id=4]
 
 [sub_resource type="CapsuleShape" id=1]
 height = 2.0
@@ -19,11 +22,19 @@ shape = SubResource( 1 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.82931 )
 far = 150.0
 
-[node name="RayCast" type="RayCast" parent="Camera"]
+[node name="Interaction" type="RayCast" parent="Camera"]
 enabled = true
 cast_to = Vector3( 0, 0, -10 )
 collision_mask = 2
+script = ExtResource( 2 )
+
+[node name="TextureRect" type="TextureRect" parent="Camera"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 3 )
+script = ExtResource( 4 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
 mesh = SubResource( 2 )
 material/0 = null
+
