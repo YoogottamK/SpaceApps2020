@@ -13,9 +13,27 @@ _global_script_classes=[ {
 "class": "Debris",
 "language": "GDScript",
 "path": "res://scripts/Debris.gd"
+}, {
+"base": "KinematicBody",
+"class": "Player",
+"language": "GDScript",
+"path": "res://scripts/Player.gd"
+}, {
+"base": "StaticBody",
+"class": "Shop",
+"language": "GDScript",
+"path": "res://scripts/Shop.gd"
+}, {
+"base": "StaticBody",
+"class": "Shop_2",
+"language": "GDScript",
+"path": "res://Shop_2.gd"
 } ]
 _global_script_class_icons={
-"Debris": ""
+"Debris": "",
+"Player": "",
+"Shop": "",
+"Shop_2": ""
 }
 
 [application]

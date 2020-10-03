@@ -18,7 +18,7 @@ func _ready():
 func _process(delta):
 	$lblCurrentLevelValue.set_text(str(PlayerVariables.tool_level))
 	if PlayerVariables.tool_level < 5:
-		$lblMaxlevel.modulate = Color(0, 0, 0, 0)
+		$lblMaxlevel.hide()
 	else:
 		$lblMaxlevel.modulate = Color(256, 256, 256, 1)
 		
@@ -56,3 +56,7 @@ func _on_BtnUpd5_pressed():
 	PlayerVariables.resource -= upgrade_costs[3]
 	PlayerVariables.tool_skills += upgrade_tool[3]
 	PlayerVariables.tool_level = 5
+
+func _on_BtnExitShop_pressed():
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	$".".hide()

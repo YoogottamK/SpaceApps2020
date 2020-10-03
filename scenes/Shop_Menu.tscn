@@ -72,8 +72,16 @@ margin_right = 197.292
 margin_bottom = 490.131
 text = "You are at max level"
 
+[node name="BtnExitShop" type="Button" parent="."]
+margin_left = 739.058
+margin_top = 472.022
+margin_right = 751.058
+margin_bottom = 492.022
+text = "Exit Shop"
+
 [connection signal="pressed" from="BtnUpd1" to="." method="_on_BtnUpd1_pressed"]
 [connection signal="pressed" from="BtnUpd2" to="." method="_on_BtnUpd2_pressed"]
 [connection signal="pressed" from="BtnUpd3" to="." method="_on_BtnUpd3_pressed"]
 [connection signal="pressed" from="BtnUpd4" to="." method="_on_BtnUpd4_pressed"]
 [connection signal="pressed" from="BtnUpd5" to="." method="_on_BtnUpd5_pressed"]
+[connection signal="pressed" from="BtnExitShop" to="." method="_on_BtnExitShop_pressed"]
