@@ -24,6 +24,10 @@ config/name="SpaceApps"
 run/main_scene="res://scenes/Welcome.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+PlayerVariables="*res://scripts/PlayerVariables.gd"
+
 [input]
 
 ui_accept={

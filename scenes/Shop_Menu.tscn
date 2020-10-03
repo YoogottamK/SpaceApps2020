@@ -1,0 +1,79 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scripts/ShopControl.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.10803
+margin_right = 1.10803
+script = ExtResource( 1 )
+
+[node name="BtnUpd1" type="Button" parent="."]
+margin_left = 60.0
+margin_top = 102.0
+margin_right = 192.0
+margin_bottom = 122.0
+text = "Upgrade to Level 1"
+
+[node name="BtnUpd2" type="Button" parent="."]
+margin_left = 63.0
+margin_top = 177.0
+margin_right = 75.0
+margin_bottom = 197.0
+text = "Upgrade to Level 2"
+
+[node name="BtnUpd3" type="Button" parent="."]
+margin_left = 63.0
+margin_top = 255.0
+margin_right = 195.0
+margin_bottom = 275.0
+text = "Upgrade to Level 3"
+
+[node name="BtnUpd4" type="Button" parent="."]
+margin_left = 65.0
+margin_top = 329.0
+margin_right = 197.0
+margin_bottom = 349.0
+text = "Upgrade to Level 4"
+
+[node name="BtnUpd5" type="Button" parent="."]
+margin_left = 66.0
+margin_top = 400.0
+margin_right = 198.0
+margin_bottom = 420.0
+text = "Upgrade to Level 5"
+
+[node name="Shop Title" type="Label" parent="."]
+margin_left = 57.6177
+margin_top = 33.241
+margin_right = 341.618
+margin_bottom = 64.241
+text = "Welcome to the shop ! 
+Dispose your resources to upgrade your tool"
+
+[node name="LblCurrentLevel" type="Label" parent="."]
+margin_left = 735.0
+margin_top = 39.0
+margin_right = 843.0
+margin_bottom = 53.0
+text = "Current Level is: "
+
+[node name="lblCurrentLevelValue" type="Label" parent="."]
+margin_left = 854.973
+margin_top = 38.8457
+margin_right = 894.973
+margin_bottom = 52.8457
+
+[node name="lblMaxlevel" type="Label" parent="."]
+margin_left = 68.2916
+margin_top = 476.131
+margin_right = 197.292
+margin_bottom = 490.131
+text = "You are at max level"
+
+[connection signal="pressed" from="BtnUpd1" to="." method="_on_BtnUpd1_pressed"]
+[connection signal="pressed" from="BtnUpd2" to="." method="_on_BtnUpd2_pressed"]
+[connection signal="pressed" from="BtnUpd3" to="." method="_on_BtnUpd3_pressed"]
+[connection signal="pressed" from="BtnUpd4" to="." method="_on_BtnUpd4_pressed"]
+[connection signal="pressed" from="BtnUpd5" to="." method="_on_BtnUpd5_pressed"]
