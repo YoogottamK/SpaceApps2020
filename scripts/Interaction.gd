@@ -10,4 +10,4 @@ func _process(delta):
         var reward = collider.reward
         collider.health -= player.tool_level
         if old_h - player.tool_level <= 0:
-            player.resources += reward
+            player.resource += reward
