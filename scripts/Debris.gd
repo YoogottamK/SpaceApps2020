@@ -7,7 +7,7 @@ export var reward = 100
 
 var health = initial_health
 
-var A = 4
+var A = 8
 var B = 3
 var anomaly = 1.7
 var angle = anomaly
