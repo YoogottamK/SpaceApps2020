@@ -7,7 +7,7 @@
 
 [sub_resource type="CubeMesh" id=2]
 
-[node name="Debris" type="StaticBody"]
+[node name="Debris" type="KinematicBody"]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1, 0 )
 collision_layer = 2
 script = ExtResource( 1 )
