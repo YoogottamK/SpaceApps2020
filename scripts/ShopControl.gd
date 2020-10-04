@@ -60,3 +60,4 @@ func _on_BtnUpd5_pressed():
 func _on_BtnExitShop_pressed():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	$".".hide()
+	PlayerVariables.is_popup_open = false

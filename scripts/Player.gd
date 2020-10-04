@@ -19,11 +19,13 @@ signal show_shop
 
 func _input(event):
 	if event is InputEventMouseMotion:
-		player.rotate_y(deg2rad(-event.relative.x * mouse_sensitivity))
+		if PlayerVariables.is_popup_open == false:
+			player.rotate_y(deg2rad(-event.relative.x * mouse_sensitivity))
 		
 	if Input.is_key_pressed(KEY_G):
 		if near_shop == true:
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+			PlayerVariables.is_popup_open = true
 			emit_signal("show_shop")
 
 func _process(_delta):
@@ -56,8 +58,10 @@ func _physics_process(delta):
 
 
 func _on_Shop_close_shop():
+	print("Caught close")
 	near_shop = false
 
 
 func _on_Shop_show_shop():
+	print("Caught show")
 	near_shop = true
