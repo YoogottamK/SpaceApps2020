@@ -28,5 +28,5 @@ script = ExtResource( 2 )
 [node name="UI" parent="Camera" instance=ExtResource( 3 )]
 
 [node name="spaceship" parent="." instance=ExtResource( 4 )]
-transform = Transform( -0.01, 0, -3.25841e-09, 0, 0.01, 0, 3.25841e-09, 0, -0.01, -0.0536095, -0.856964, 0 )
+transform = Transform( -0.01, 0, -3.25841e-09, -3.87173e-10, 0.00992915, 0.00118823, 3.23533e-09, 0.00118823, -0.00992915, -0.0536095, -0.856964, 0 )
 
