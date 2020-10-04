@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scripts/Debris.gd" type="Script" id=1]
 [ext_resource path="res://scenes/HealthBar3D.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/rock/Rock1.dae" type="PackedScene" id=3]
 
-[sub_resource type="BoxShape" id=1]
+[sub_resource type="SphereShape" id=1]
 
 [sub_resource type="CubeMesh" id=2]
 
@@ -13,6 +14,8 @@ collision_layer = 2
 script = ExtResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1.134, 0, 0, 0, 1.056, 0, 0, 0, 1.098, 0, 0, 0 )
+visible = false
 shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="CollisionShape"]
@@ -22,3 +25,5 @@ material/0 = null
 [node name="HealthBar3D" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.46873, 0 )
 
+[node name="Rock1" parent="." instance=ExtResource( 3 )]
+transform = Transform( -0.841999, 0.00209873, 1.17892e-12, -0.00114435, -1.53978, -0.050119, -6.14949e-05, -0.0827445, 0.932654, -0.0628633, 0.854975, 0.126364 )
