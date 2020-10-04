@@ -9,32 +9,31 @@ export var reward = 100
 
 var health = initial_health
 
-var A = 5.155
-var B = 5.155
-var anomaly = 1.7
-var angle = anomaly
-var apogee = 4.5 # furthest point
-var inc = 1.72 # radians
+var A
+var B
+var anomaly
+var angle
+var apogee
+var inc
 
-var rotate_speed = 0.98
-var radius = 20 * rotate_speed
+var rotate_speed
+var radius
+var e
+var k
+var theta
 
-var e = sqrt(1 - (B * B / (A * A)))
-var k = sqrt(1 / ((cos(anomaly) * cos(anomaly) / (A * A)) + (sin(anomaly) * sin(anomaly) / (B * B))))
-var theta = atan(k * sin(anomaly) / (e + k * cos(anomaly)))
-
-func init(p_A, p_B, p_anomaly, p_apogee, p_rotate_speed):
-    A = p_A
-    B = p_B
+func init(p_inc, p_e, p_anomaly, p_rot_speed, p_radius, p_b, p_a, p_apogee, p_k, p_theta):
+    inc = p_inc
+    e = p_e
     anomaly = p_anomaly
-    angle = anomaly
+    rotate_speed = p_rot_speed
+    radius = p_radius
+    B = p_b
+    A = p_a
     apogee = p_apogee
-    rotate_speed = p_rotate_speed
-    radius = 20 * rotate_speed
-
-    e = sqrt(1 - (B * B / (A * A)))
-    k = sqrt(1 / ((cos(anomaly) * cos(anomaly) / (A * A)) + (sin(anomaly) * sin(anomaly) / (B * B))))
-    theta = atan(k * sin(anomaly) / (e + k * cos(anomaly)))
+    k = p_k
+    theta = p_theta
+    angle = theta
 
 func _process(_delta):
     $HealthBar3D.update(health, initial_health)
