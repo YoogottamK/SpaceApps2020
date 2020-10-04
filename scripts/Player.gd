@@ -33,9 +33,6 @@ func _input(event):
             PlayerVariables.is_popup_open = true
             emit_signal("show_shop")
 
-    if Input.is_action_just_pressed("ui_cancel"):
-        Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-
     if Input.is_key_pressed(KEY_C):
         cam1_active = !cam1_active
         $Camera.current = cam1_active

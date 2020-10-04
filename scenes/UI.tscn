@@ -116,6 +116,12 @@ margin_right = 1920.0
 margin_bottom = 640.0
 script = ExtResource( 3 )
 
+[node name="ColorRect" type="ColorRect" parent="Message"]
+visible = false
+margin_right = 1920.0
+margin_bottom = 200.0
+color = Color( 0, 0, 0, 0.25098 )
+
 [node name="Value" type="Label" parent="Message"]
 margin_right = 1920.0
 margin_bottom = 200.0
@@ -124,12 +130,6 @@ custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 align = 1
 valign = 1
-
-[node name="ColorRect" type="ColorRect" parent="Message"]
-visible = false
-margin_right = 1920.0
-margin_bottom = 200.0
-color = Color( 0, 0, 0, 0.25098 )
 
 [node name="Facts" type="Label" parent="."]
 margin_top = 880.0
