@@ -7,8 +7,9 @@ var bar_yellow = preload("res://assets/HealthBar/yellow.png")
 func update_bar(amount, full):
     max_value = full
     texture_progress = bar_green
+    value = amount
+
     if amount < 0.75 * full:
         texture_progress = bar_yellow
-    if value < 0.45 * full:
+    if value < 0.25 * full:
         texture_progress = bar_red
-    value = amount

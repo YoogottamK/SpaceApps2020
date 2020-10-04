@@ -27,12 +27,12 @@ func _input(event):
             PlayerVariables.is_popup_open = true
             emit_signal("show_shop")
 
-func _process(_delta):
     if Input.is_action_just_pressed("ui_cancel"):
         Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-    
-    HUD_score.text = String(resource)
-    HUD_level.text = String(tool_level)
+
+func _process(_delta):
+    HUD_score.text = String(PlayerVariables.resource)
+    HUD_level.text = String(PlayerVariables.tool_level)
 
 
 func _physics_process(delta):

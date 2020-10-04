@@ -1,87 +1,137 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scripts/ShopControl.gd" type="Script" id=1]
+[ext_resource path="res://assets/fonts/Bangers-Regular.ttf" type="DynamicFontData" id=2]
 
-[node name="Control" type="Control"]
+[sub_resource type="DynamicFont" id=1]
+size = 48
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+font_data = ExtResource( 2 )
+
+[node name="ShopMenu" type="MarginContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 1.10803
 margin_right = 1.10803
+custom_constants/margin_right = 100
+custom_constants/margin_top = 200
+custom_constants/margin_left = 100
+custom_constants/margin_bottom = 200
 script = ExtResource( 1 )
 
-[node name="BtnUpd1" type="Button" parent="."]
-margin_left = 60.0
-margin_top = 102.0
-margin_right = 192.0
-margin_bottom = 122.0
-text = "Upgrade to Level 1"
+[node name="ShopUIContainer" type="VBoxContainer" parent="."]
+margin_left = 100.0
+margin_top = 200.0
+margin_right = 1820.0
+margin_bottom = 880.0
+custom_constants/separation = 20
+alignment = 1
 
-[node name="BtnUpd2" type="Button" parent="."]
-margin_left = 63.0
-margin_top = 177.0
-margin_right = 75.0
-margin_bottom = 197.0
-text = "Upgrade to Level 2"
-
-[node name="BtnUpd3" type="Button" parent="."]
-margin_left = 63.0
-margin_top = 255.0
-margin_right = 195.0
-margin_bottom = 275.0
-text = "Upgrade to Level 3"
-
-[node name="BtnUpd4" type="Button" parent="."]
-margin_left = 65.0
-margin_top = 329.0
-margin_right = 197.0
-margin_bottom = 349.0
-text = "Upgrade to Level 4"
-
-[node name="BtnUpd5" type="Button" parent="."]
-margin_left = 66.0
-margin_top = 400.0
-margin_right = 198.0
-margin_bottom = 420.0
-text = "Upgrade to Level 5"
-
-[node name="Shop Title" type="Label" parent="."]
-margin_left = 57.6177
-margin_top = 33.241
-margin_right = 341.618
-margin_bottom = 64.241
+[node name="Shop Title" type="Label" parent="ShopUIContainer"]
+margin_right = 1720.0
+margin_bottom = 107.0
+custom_fonts/font = SubResource( 1 )
 text = "Welcome to the shop ! 
 Dispose your resources to upgrade your tool"
+align = 1
 
-[node name="LblCurrentLevel" type="Label" parent="."]
-margin_left = 735.0
-margin_top = 39.0
-margin_right = 843.0
-margin_bottom = 53.0
+[node name="Upgrades" type="VBoxContainer" parent="ShopUIContainer"]
+margin_top = 127.0
+margin_right = 1720.0
+margin_bottom = 475.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 10
+alignment = 1
+
+[node name="BtnUpd1" type="Button" parent="ShopUIContainer/Upgrades"]
+margin_left = 752.0
+margin_right = 968.0
+margin_bottom = 61.0
+size_flags_horizontal = 4
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+text = "Upgrade to Level 1"
+
+[node name="BtnUpd2" type="Button" parent="ShopUIContainer/Upgrades"]
+margin_left = 749.0
+margin_top = 71.0
+margin_right = 970.0
+margin_bottom = 132.0
+size_flags_horizontal = 4
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+text = "Upgrade to Level 2"
+
+[node name="BtnUpd3" type="Button" parent="ShopUIContainer/Upgrades"]
+margin_left = 749.0
+margin_top = 142.0
+margin_right = 970.0
+margin_bottom = 203.0
+size_flags_horizontal = 4
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+text = "Upgrade to Level 3"
+
+[node name="BtnUpd4" type="Button" parent="ShopUIContainer/Upgrades"]
+margin_left = 749.0
+margin_top = 213.0
+margin_right = 970.0
+margin_bottom = 274.0
+size_flags_horizontal = 4
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+text = "Upgrade to Level 4"
+
+[node name="BtnUpd5" type="Button" parent="ShopUIContainer/Upgrades"]
+margin_left = 750.0
+margin_top = 284.0
+margin_right = 970.0
+margin_bottom = 348.0
+size_flags_horizontal = 4
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+text = "Upgrade to Level 5"
+
+[node name="Level" type="HBoxContainer" parent="ShopUIContainer"]
+margin_top = 495.0
+margin_right = 1720.0
+margin_bottom = 547.0
+
+[node name="Label" type="Label" parent="ShopUIContainer/Level"]
+margin_right = 284.0
+margin_bottom = 52.0
+custom_fonts/font = SubResource( 1 )
 text = "Current Level is: "
 
-[node name="lblCurrentLevelValue" type="Label" parent="."]
-margin_left = 854.973
-margin_top = 38.8457
-margin_right = 894.973
-margin_bottom = 52.8457
+[node name="Value" type="Label" parent="ShopUIContainer/Level"]
+margin_left = 288.0
+margin_right = 1720.0
+margin_bottom = 52.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 1 )
 
-[node name="lblMaxlevel" type="Label" parent="."]
-margin_left = 68.2916
-margin_top = 476.131
-margin_right = 197.292
-margin_bottom = 490.131
+[node name="lblMaxlevel" type="Label" parent="ShopUIContainer"]
+margin_top = 567.0
+margin_right = 1720.0
+margin_bottom = 619.0
+custom_fonts/font = SubResource( 1 )
 text = "You are at max level"
 
-[node name="BtnExitShop" type="Button" parent="."]
-margin_left = 739.058
-margin_top = 472.022
-margin_right = 751.058
-margin_bottom = 492.022
+[node name="BtnExitShop" type="Button" parent="ShopUIContainer"]
+margin_top = 639.0
+margin_right = 1720.0
+margin_bottom = 680.0
+custom_fonts/font = SubResource( 2 )
 text = "Exit Shop"
 
-[connection signal="pressed" from="BtnUpd1" to="." method="_on_BtnUpd1_pressed"]
-[connection signal="pressed" from="BtnUpd2" to="." method="_on_BtnUpd2_pressed"]
-[connection signal="pressed" from="BtnUpd3" to="." method="_on_BtnUpd3_pressed"]
-[connection signal="pressed" from="BtnUpd4" to="." method="_on_BtnUpd4_pressed"]
-[connection signal="pressed" from="BtnUpd5" to="." method="_on_BtnUpd5_pressed"]
-[connection signal="pressed" from="BtnExitShop" to="." method="_on_BtnExitShop_pressed"]
+[connection signal="pressed" from="ShopUIContainer/Upgrades/BtnUpd1" to="." method="_on_BtnUpd1_pressed"]
+[connection signal="pressed" from="ShopUIContainer/Upgrades/BtnUpd2" to="." method="_on_BtnUpd2_pressed"]
+[connection signal="pressed" from="ShopUIContainer/Upgrades/BtnUpd3" to="." method="_on_BtnUpd3_pressed"]
+[connection signal="pressed" from="ShopUIContainer/Upgrades/BtnUpd4" to="." method="_on_BtnUpd4_pressed"]
+[connection signal="pressed" from="ShopUIContainer/Upgrades/BtnUpd5" to="." method="_on_BtnUpd5_pressed"]
+[connection signal="pressed" from="ShopUIContainer/BtnExitShop" to="." method="_on_BtnExitShop_pressed"]

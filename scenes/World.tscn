@@ -6,14 +6,10 @@
 [ext_resource path="res://scenes/Shop.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/ShopMenu.tscn" type="PackedScene" id=5]
 
-
-
 [node name="World" type="Spatial"]
 script = ExtResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-
-[node name="Bounds" type="Spatial" parent="."]
 
 [node name="Debris" parent="." instance=ExtResource( 3 )]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1, -10 )
@@ -23,8 +19,5 @@ transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.02586, -18.9703 )
 input_capture_on_drag = false
 collision_layer = 2
 
-[node name="Control" parent="." instance=ExtResource( 5 )]
+[node name="ShopMenu" parent="." instance=ExtResource( 5 )]
 
-[connection signal="show_shop" from="Player" to="." method="_on_Player_show_shop"]
-[connection signal="close_shop" from="Shop" to="Player" method="_on_Shop_close_shop"]
-[connection signal="show_shop" from="Shop" to="Player" method="_on_Shop_show_shop"]
