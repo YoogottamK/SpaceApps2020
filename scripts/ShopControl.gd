@@ -15,6 +15,7 @@ onready var btns = [ \
 
 onready var current_level = $ShopUIContainer/Level/Value
 onready var max_level = $ShopUIContainer/lblMaxlevel
+onready var click_sound = $ShopUIContainer/ClickSound
 
 func _ready():
     for i in range(n_upgrades):
@@ -44,28 +45,34 @@ func _on_BtnUpd1_pressed():
     PlayerVariables.resource -= upgrade_costs[0]
     PlayerVariables.tool_skills += upgrade_tool[0]
     PlayerVariables.tool_level = 1
+    click_sound.play()
 
 func _on_BtnUpd2_pressed():
     PlayerVariables.resource -= upgrade_costs[1]
     PlayerVariables.tool_skills += upgrade_tool[1]
     PlayerVariables.tool_level = 2
+    click_sound.play()
 
 func _on_BtnUpd3_pressed():
     PlayerVariables.resource -= upgrade_costs[2]
     PlayerVariables.tool_skills += upgrade_tool[2]
     PlayerVariables.tool_level = 3
+    click_sound.play()
 
 func _on_BtnUpd4_pressed():
     PlayerVariables.resource -= upgrade_costs[3]
     PlayerVariables.tool_skills += upgrade_tool[3]
     PlayerVariables.tool_level = 4
+    click_sound.play()
 
 func _on_BtnUpd5_pressed():
     PlayerVariables.resource -= upgrade_costs[4]
     PlayerVariables.tool_skills += upgrade_tool[4]
     PlayerVariables.tool_level = 5
+    click_sound.play()
 
 func _on_BtnExitShop_pressed():
     Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
     hide()
     PlayerVariables.is_popup_open = false
+    click_sound.play()
