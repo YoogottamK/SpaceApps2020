@@ -9,14 +9,14 @@ export var reward = 100
 
 var health = initial_health
 
-var A = 8
-var B = 3
+var A = 5.155
+var B = 5.155
 var anomaly = 1.7
 var angle = anomaly
-var apogee = 1.5 # furthest point
-var inc = PI / 3 # radians
+var apogee = 4.5 # furthest point
+var inc = 1.72 # radians
 
-var rotate_speed = 0.1
+var rotate_speed = 0.98
 var radius = 20 * rotate_speed
 
 var e = sqrt(1 - (B * B / (A * A)))

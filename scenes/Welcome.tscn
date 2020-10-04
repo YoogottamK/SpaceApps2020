@@ -28,6 +28,17 @@ text = "SPACEAPPS 2020 DEBRIS GAME"
 align = 1
 valign = 1
 
+[node name="Help" type="Button" parent="."]
+margin_left = 710.0
+margin_top = 900.0
+margin_right = 1210.0
+margin_bottom = 1030.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_disabled = Color( 0.152941, 0.203922, 0.729412, 1 )
+custom_colors/font_color = Color( 1, 0.996078, 0.996078, 1 )
+text = "Help"
+flat = true
+
 [node name="ButtonMargin" type="MarginContainer" parent="."]
 modulate = Color( 0.87451, 0.772549, 0.772549, 1 )
 self_modulate = Color( 0.847059, 0.713726, 0.713726, 1 )
@@ -55,9 +66,9 @@ script = ExtResource( 5 )
 
 [node name="CheckboxMargin" type="MarginContainer" parent="."]
 margin_left = 660.0
-margin_top = 800.0
+margin_top = 700.0
 margin_right = 1260.0
-margin_bottom = 950.0
+margin_bottom = 850.0
 custom_constants/margin_right = 100
 custom_constants/margin_top = 20
 custom_constants/margin_left = 100
@@ -76,5 +87,6 @@ align = 1
 [node name="ClickSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
 
+[connection signal="pressed" from="Help" to="ButtonMargin/StartGame" method="_on_Help_pressed"]
 [connection signal="pressed" from="ButtonMargin/StartGame" to="ButtonMargin/StartGame" method="_on_Button_pressed"]
 [connection signal="pressed" from="CheckboxMargin/FullscreenToggle" to="ButtonMargin/StartGame" method="_on_FullscreenToggle_pressed"]

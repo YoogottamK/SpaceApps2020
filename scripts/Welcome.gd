@@ -10,3 +10,7 @@ func _on_Button_pressed():
 func _on_FullscreenToggle_pressed():
     OS.window_fullscreen = !OS.window_fullscreen
     click_sound.play()
+
+func _on_Help_pressed():
+    click_sound.play()
+    get_tree().change_scene("res://scenes/Help.tscn")
