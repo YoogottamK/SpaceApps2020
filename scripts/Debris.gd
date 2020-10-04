@@ -8,7 +8,7 @@ export var reward = 100
 var health = initial_health
 
 func _process(delta):
-	scale = scale.normalized() * (0.5 + health / initial_health)
-	$HealthBar3D.update(health, initial_health)
-	if health <= 0:
-		queue_free()
+    scale = scale.normalized() * (0.5 + health / initial_health)
+    $HealthBar3D.update(health, initial_health)
+    if health <= 0:
+        queue_free()

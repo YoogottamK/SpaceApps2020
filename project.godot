@@ -23,17 +23,11 @@ _global_script_classes=[ {
 "class": "Shop",
 "language": "GDScript",
 "path": "res://scripts/Shop.gd"
-}, {
-"base": "StaticBody",
-"class": "Shop_2",
-"language": "GDScript",
-"path": "res://Shop_2.gd"
 } ]
 _global_script_class_icons={
 "Debris": "",
 "Player": "",
-"Shop": "",
-"Shop_2": ""
+"Shop": ""
 }
 
 [application]
@@ -45,6 +39,13 @@ config/icon="res://icon.png"
 [autoload]
 
 PlayerVariables="*res://scripts/PlayerVariables.gd"
+
+[display]
+
+window/size/width=1920
+window/size/height=1080
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
 
 [input]
 
