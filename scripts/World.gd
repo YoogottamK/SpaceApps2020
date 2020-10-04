@@ -21,4 +21,5 @@ func _on_Player_show_shop():
     $ShopMenu.show()
 
 func _on_Timer_timeout():
-    $Player.queue_free()
+    Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+    get_tree().change_scene("res://scenes/Welcome.tscn")
