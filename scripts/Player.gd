@@ -5,7 +5,8 @@ export var acceleration = 1
 export var mouse_sensitivity = 0.03
 
 onready var camera = $Camera
-onready var player = $"."
+onready var HUD_score = $Camera/UI/HUDContainer/HUD/Score/Value
+onready var HUD_level = $Camera/UI/HUDContainer/HUD/ToolLevel/Value
 
 var velocity = Vector3()
 
@@ -14,11 +15,15 @@ var resource = 0
 
 func _input(event):
     if event is InputEventMouseMotion:
-        player.rotate_y(deg2rad(-event.relative.x * mouse_sensitivity))
+        rotate_y(deg2rad(-event.relative.x * mouse_sensitivity))
 
 func _process(_delta):
     if Input.is_action_just_pressed("ui_cancel"):
         Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+    
+    HUD_score.text = String(resource)
+    HUD_level.text = String(tool_level)
+
 
 func _physics_process(delta):
     var camera_basis = camera.get_camera_transform().basis
