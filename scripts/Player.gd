@@ -9,7 +9,9 @@ export var mouse_sensitivity = 0.03
 onready var camera = $Camera
 onready var HUD_score = $Camera/UI/HUDContainer/HUD/Score/Value
 onready var HUD_level = $Camera/UI/HUDContainer/HUD/ToolLevel/Value
+onready var HUD_time = $Camera/UI/HUDContainer/HUD/Countdown/Value
 onready var message = $Camera/UI/Message
+onready var timer = $"../Timer"
 
 var velocity = Vector3()
 
@@ -42,6 +44,7 @@ func _input(event):
 func _process(_delta):
     HUD_score.text = String(PlayerVariables.resource)
     HUD_level.text = String(PlayerVariables.tool_level)
+    HUD_time.text = String(int(timer.time_left)) + "s"
 
 func _physics_process(delta):
     var camera_basis = camera.get_camera_transform().basis

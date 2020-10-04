@@ -15,7 +15,7 @@ var apogee = 1.5 # furthest point
 var inc = PI / 3 # radians
 
 var rotate_speed = 0.1
-var radius = 20*rotate_speed
+var radius = 20 * rotate_speed
 
 var e = sqrt(1 - (B * B / (A * A)))
 var k = sqrt(1 / ((cos(anomaly) * cos(anomaly) / (A * A)) + (sin(anomaly) * sin(anomaly) / (B * B))))
@@ -34,7 +34,7 @@ func init(p_A, p_B, p_anomaly, p_apogee, p_rotate_speed):
     k = sqrt(1 / ((cos(anomaly) * cos(anomaly) / (A * A)) + (sin(anomaly) * sin(anomaly) / (B * B))))
     theta = atan(k * sin(anomaly) / (e + k * cos(anomaly)))
 
-func _process(delta):
+func _process(_delta):
     $HealthBar3D.update(health, initial_health)
     if health <= 0:
         health = initial_health
