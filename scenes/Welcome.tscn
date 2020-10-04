@@ -51,5 +51,6 @@ margin_right = 1820.0
 margin_bottom = 44.0
 text = "Fullscreen"
 align = 1
+
 [connection signal="pressed" from="ButtonMargin/StartGame" to="ButtonMargin/StartGame" method="_on_Button_pressed"]
 [connection signal="pressed" from="CheckboxMargin/FullscreenToggle" to="ButtonMargin/StartGame" method="_on_FullscreenToggle_pressed"]
