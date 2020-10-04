@@ -13,6 +13,9 @@ func _ready():
     $Timer.connect("timeout", self, "_on_Timer_timeout")
 
     $ShopMenu.hide()
+    
+    PlayerVariables.resource = 0
+    PlayerVariables.tool_level = 1
 
     var tle_file = File.new()
     tle_file.open("res://tle-debris.json", tle_file.READ)
@@ -30,4 +33,10 @@ func _on_Player_show_shop():
 
 func _on_Timer_timeout():
     Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+    var score = 0
+    for i in range(PlayerVariables.tool_level):
+        score += $ShopMenu.upgrade_costs[i]
+    if score > PlayerVariables.highscore:
+        PlayerVariables.highscore = score
+    
     get_tree().change_scene("res://scenes/Welcome.tscn")
