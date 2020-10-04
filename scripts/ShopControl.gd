@@ -1,8 +1,6 @@
 extends Control
 
-
-const upgrade_tool = [10, 20, 50, 100, 200]
-const upgrade_costs = [200, 500, 1000, 5000, 10000]
+const upgrade_costs = [200, 500, 1000, 2500, 5000]
 const n_upgrades = 5
 
 onready var btns = [ \
@@ -43,31 +41,26 @@ func _process(_delta):
 
 func _on_BtnUpd1_pressed():
     PlayerVariables.resource -= upgrade_costs[0]
-    PlayerVariables.tool_skills += upgrade_tool[0]
     PlayerVariables.tool_level = 1
     click_sound.play()
 
 func _on_BtnUpd2_pressed():
     PlayerVariables.resource -= upgrade_costs[1]
-    PlayerVariables.tool_skills += upgrade_tool[1]
     PlayerVariables.tool_level = 2
     click_sound.play()
 
 func _on_BtnUpd3_pressed():
     PlayerVariables.resource -= upgrade_costs[2]
-    PlayerVariables.tool_skills += upgrade_tool[2]
     PlayerVariables.tool_level = 3
     click_sound.play()
 
 func _on_BtnUpd4_pressed():
     PlayerVariables.resource -= upgrade_costs[3]
-    PlayerVariables.tool_skills += upgrade_tool[3]
     PlayerVariables.tool_level = 4
     click_sound.play()
 
 func _on_BtnUpd5_pressed():
     PlayerVariables.resource -= upgrade_costs[4]
-    PlayerVariables.tool_skills += upgrade_tool[4]
     PlayerVariables.tool_level = 5
     click_sound.play()
 
