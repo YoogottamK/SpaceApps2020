@@ -29,8 +29,7 @@ func init(p_inc, p_e, p_anomaly, p_rot_speed, p_radius, p_b, p_a, p_apogee, p_k,
     inc = p_inc
     e = p_e
     anomaly = p_anomaly
-    #rotate_speed = p_rot_speed / 8
-    rotate_speed = 0.05
+    rotate_speed = p_rot_speed / 18
     # radius = p_radius
     radius = rotate_speed * 20
     B = p_b

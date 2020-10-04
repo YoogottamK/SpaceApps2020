@@ -29,7 +29,7 @@ func _ready():
 
     for debris_data in tle_data:
         var new_debris = DebrisScene.instance()
-        var init_pos = Vector3(debris_data["initpos"][0], debris_data["initpos"][1], debris_data["initpos"][2])
+        var init_pos = Vector3(debris_data["initpos"][0] * 10, debris_data["initpos"][1] * 5, debris_data["initpos"][2] * 10)
         new_debris.init(debris_data["inclination"], debris_data["e"], debris_data["anamoly"], debris_data["rot_speed"], debris_data["radius"], debris_data["b"], debris_data["a"], debris_data["apogee"], debris_data["k"], debris_data["theta"], init_pos)
         new_debris.global_transform.origin = init_pos
         debris_container.add_child(new_debris)
