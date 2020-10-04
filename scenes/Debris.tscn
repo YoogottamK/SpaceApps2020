@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scripts/Debris.gd" type="Script" id=1]
 [ext_resource path="res://scenes/HealthBar3D.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/rock/Rock1.dae" type="PackedScene" id=3]
+[ext_resource path="res://assets/audio/debris.wav" type="AudioStream" id=4]
 
 [sub_resource type="SphereShape" id=1]
 
@@ -20,4 +21,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
 
 [node name="Rock1" parent="." instance=ExtResource( 3 )]
 transform = Transform( -0.699999, 0.00136104, 2.27156e-11, -0.000951358, -0.998558, -0.0305865, -5.11239e-05, -0.0536604, 0.569179, -0.0628633, 0.612587, 0.0142597 )
+
+[node name="CollectionSound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource( 4 )
+unit_db = 80.0
 

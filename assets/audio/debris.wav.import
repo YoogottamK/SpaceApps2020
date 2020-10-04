@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/debris.wav-6ab5fe9ef62db346f5c83e88c1017d6f.sample"
+
+[deps]
+
+source_file="res://assets/audio/debris.wav"
+dest_files=[ "res://.import/debris.wav-6ab5fe9ef62db346f5c83e88c1017d6f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

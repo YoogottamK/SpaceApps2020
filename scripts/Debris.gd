@@ -2,6 +2,8 @@ extends KinematicBody
 
 class_name Debris
 
+onready var collection_sound = $CollectionSound
+
 export var initial_health = 256
 export var reward = 100
 
@@ -37,6 +39,7 @@ func init(p_A, p_B, p_anomaly, p_apogee, p_rotate_speed):
 func _process(_delta):
     $HealthBar3D.update(health, initial_health)
     if health <= 0:
+        collection_sound.play()
         health = initial_health
         # queue_free()
 
