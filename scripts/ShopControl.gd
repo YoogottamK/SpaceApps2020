@@ -1,6 +1,6 @@
 extends Control
 
-const upgrade_costs = [200, 500, 1000, 2500, 5000]
+const upgrade_costs = [0, 500, 1000, 2500, 5000]
 const n_upgrades = 5
 
 onready var btns = [ \

@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scripts/Shop.gd" type="Script" id=1]
 
@@ -11,6 +11,8 @@ height = 40.0
 
 [sub_resource type="CylinderMesh" id=3]
 height = 40.0
+
+[sub_resource type="SpatialMaterial" id=4]
 
 [node name="Shop" type="StaticBody"]
 input_capture_on_drag = true
@@ -28,7 +30,7 @@ shape = SubResource( 2 )
 [node name="MeshInstance" type="MeshInstance" parent="CollisionShape"]
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
 mesh = SubResource( 3 )
-material/0 = null
+material/0 = SubResource( 4 )
 
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
 [connection signal="body_exited" from="Area" to="." method="_on_Area_body_exited"]
